@@ -226,4 +226,4 @@
         <version>4.3.7.RELEASE</version>
     </dependency>
 ## ssm目录结构
-![ssm目录结构]https://github.com/lLiZJ/ssm-/blob/master/ssm.png
+![ssm目录结构](https://github.com/lLiZJ/ssm-/blob/master/ssm.png)
