@@ -133,6 +133,19 @@
             <!-- 默认匹配所有的请求 -->
             <url-pattern>/</url-pattern>
         </servlet-mapping>
+        <!-- 处理中文乱码 -->
+        <filter> 
+            <filter-name>CharacterEncodingFilter</filter-name> 
+            <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class> 
+            <init-param> 
+                <param-name>encoding</param-name> 
+                <param-value>utf-8</param-value> 
+            </init-param> 
+        </filter> 
+        <filter-mapping> 
+            <filter-name>CharacterEncodingFilter</filter-name> 
+            <url-pattern>/*</url-pattern> 
+        </filter-mapping>
     </web-app>
 ## 依赖
     <dependency>
@@ -141,17 +154,24 @@
         <version>3.8.1</version>
         <scope>test</scope>
     </dependency>
+    <!-- 实现sl4j接口并整合 -->
     <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>1.7.21</version>
+        <version>1.5.6</version>
+        <type>jar</type>
     </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>1.5.2</version>
+    </dependency>
+    <!-- logback -->
     <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-core</artifactId>
         <version>1.1.1</version>
     </dependency>
-    <!-- 实现sl4j接口并整合 -->
     <dependency>
         <groupId>ch.qos.logback</groupId>
         <artifactId>logback-classic</artifactId>
