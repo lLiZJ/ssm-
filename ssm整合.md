@@ -99,7 +99,7 @@
     </beans>
 ## resources/db.properties
     jdbc.driver = com.mysql.cj.jdbc.Driver
-    jdbc.url = jdbc:mysql:///stu?serverTimezone=GMT
+    jdbc.url = jdbc:mysql:///stu?serverTimezone=GMT&characterEncoding=UTF-8
     jdbc.username = root
     jdbc.password = 123456
 ## resources/log4j.properties
